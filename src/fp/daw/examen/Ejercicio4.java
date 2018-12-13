@@ -17,7 +17,11 @@ public class Ejercicio4 {
 	 * 
 	 */
 	
-	public static ...
+	public static int [] numSecuencias (int n) {
+		
+		
+		return n;
+	}
 	
 	/*
 	 * 1 punto

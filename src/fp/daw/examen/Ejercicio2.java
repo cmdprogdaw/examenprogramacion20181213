@@ -13,7 +13,9 @@ public class Ejercicio2 {
 	 *  
 	 */
 	
-	public static ...
+	public static int busquedaBinaria(int [] vector, int n) {
+		
+	}
 	
 	
 	/*
