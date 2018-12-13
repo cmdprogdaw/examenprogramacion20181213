@@ -1,5 +1,7 @@
 package fp.daw.examen;
 
+import java.util.Random;
+
 public class Ejercicio4 {
 
 	/* 
@@ -35,8 +37,9 @@ public class Ejercicio4 {
 	 */
 	
 	public static void main(String[] args) {
-		
-
+		int [] vector = new int[n];
+		Random r = new Random();
+		String n = r.nextInt(-100) +100;
 	}
 
 }
