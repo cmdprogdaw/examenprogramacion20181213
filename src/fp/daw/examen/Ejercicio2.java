@@ -1,5 +1,8 @@
 package fp.daw.examen;
 
+import java.util.Arrays;
+import java.util.Random;
+
 public class Ejercicio2 {
 
 	/* 
@@ -13,7 +16,7 @@ public class Ejercicio2 {
 	 *  
 	 */
 	
-	public static int busquedaBinaria(int [] vector, int n) {
+	public static void busquedaBinaria(int [] vector, int n) {
 		
 	}
 	
@@ -24,7 +27,7 @@ public class Ejercicio2 {
 	 * Escribe en el método main las sentencias necesarias para poner a prueba el método
 	 * 'busquedaBinaria'. En primer lugar tendrá que crear un vector de números enteros
 	 * de un tamaño aleatorio entre 100 y 200. A continuación almacenará números aleatorios
-	 * comprendios entre Integer.MIN_VALUE e Integer.MAX_VALUE - 1, sin que se repita
+	 * comprendidos entre Integer.MIN_VALUE e Integer.MAX_VALUE - 1, sin que se repita
 	 * ningún valor. Finalmente generará números aleatorios en el mismo intervalo y 
 	 * comprobará invocando al método 'busquedaBinaria' si se encuentran almacenados en
 	 * el vector. Este proceso finalizará la primera vez que la búsqueda resulte positiva, es
@@ -34,8 +37,23 @@ public class Ejercicio2 {
 	 */
 	
 	public static void main(String[] args) {
-		
-		
+		Random r = new Random();
+		int [] v = new int [r.nextInt(20 - 10 + 1) + 10];
+		long limit = (long)Integer.MAX_VALUE - (long)Integer.MIN_VALUE;
+		long valor;
+		int indice;
+		for (int i=0; i<v.length - 1; i++) {
+			valor = r.nextLong() % limit+ Integer.MIN_VALUE;
+			v[i] = (int)valor;
+		}
+		Arrays.sort(v);
+		do {
+			valor = r.nextLong() % limit + Integer.MIN_VALUE;
+			indice = Arrays.binarySearch(v, (int)valor);
+		} while (indice < 0);
+		Ejercicio1.mostrarVector(v);
+		System.out.println("El valor " + (int) valor + " se encuentra en");
+		System.out.println("La posicion " + indice + " - "+ v[indice]);
 	}
 
 }

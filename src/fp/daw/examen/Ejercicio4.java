@@ -22,7 +22,6 @@ public class Ejercicio4 {
 	public static int [] numSecuencias (int n) {
 		
 		
-		return n;
 	}
 	
 	/*
