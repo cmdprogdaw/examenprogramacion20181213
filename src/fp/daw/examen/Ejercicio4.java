@@ -19,10 +19,10 @@ public class Ejercicio4 {
 	 * 
 	 */
 	
-	public static int [] numSecuencias (int n) {
-		
-		
-	}
+//	public static int [] numSecuencias (int n) {
+//		
+//		
+//	}
 	
 	/*
 	 * 1 punto
@@ -35,10 +35,10 @@ public class Ejercicio4 {
 	 *  
 	 */
 	
-	public static void main(String[] args) {
-		int [] vector = new int[n];
-		Random r = new Random();
-		String n = r.nextInt(-100) +100;
-	}
+//	public static void main(String[] args) {
+//		int [] vector = new int[n];
+//		Random r = new Random();
+//		String n = r.nextInt(-100) +100;
+//	}
 
 }
