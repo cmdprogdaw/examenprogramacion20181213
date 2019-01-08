@@ -21,27 +21,30 @@ public class Ejercicio5 {
 	public static void main(String[] args) {
 		Random r = new Random();
 		int n = r.nextInt(101) + 100;
+		String cadena;
 
 		Scanner in = new Scanner (System.in);
 		System.out.print("Introduce un número entre 100 y 200: ");
 		int num = in.nextInt();
-
 		do {
-			int contador = 0;
+			do {
+				int contador = 0;
 				if(n == num) {
 					contador++;
 					System.out.println("Has acertado el número, los intentos que has realizado han sido: "+contador);
-					System.out.println("¿Desea volver a jugar? (s/n): ");
+
 				}
 				else{
 					contador++;
 					System.out.println("Vuelve a intentarlo, llevas "+contador+" intentos");
-					break;
 				}
 				if (num>200 || num<100){
 					System.out.println("Has introducido mal el numero");
 				}
-		}while (n != num);
+			}while (n != num);
+			System.out.println("¿Desea volver a jugar? (s/n): "); 
+			cadena = in.nextLine();
+		} while(cadena.equalsIgnoreCase("s"));
 		
 	}
 

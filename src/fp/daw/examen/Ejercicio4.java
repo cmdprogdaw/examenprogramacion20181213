@@ -19,26 +19,34 @@ public class Ejercicio4 {
 	 * 
 	 */
 	
-//	public static int [] numSecuencias (int n) {
-//		
-//		
-//	}
+	public static int numSecuencias (int [] vector) {
+		int n=0;
+		
+		for(int i=0;i<vector.length;i++) {
+			if (vector[i] == vector[i+1]) {
+				n++;
+			}
+		}
+		return n;
+	}
 	
 	/*
 	 * 1 punto
 	 * 
 	 * Escribe en el método main las sentencias necesarias para crear un vector de números
 	 * enteros de un tamaño aleatorio entre 10 y 100 y llenarlo con números enteros
-	 * aleatorios comprendidos entre -100 y 100. A continuación se mostrará su contendio por 
+	 * aleatorios comprendidos entre -100 y 100. A continuación se mostrará su contenido por 
 	 * pantalla invocando al método 'mostrarVector' definido en el ejercicio 1 y el número
 	 * de secuencias de números repetidos que contiene invocando al método 'numSecuencias'.
 	 *  
 	 */
 	
-//	public static void main(String[] args) {
-//		int [] vector = new int[n];
-//		Random r = new Random();
-//		String n = r.nextInt(-100) +100;
-//	}
-
+	public static void main(String[] args) {
+		Random r = new Random();
+		int n = r.nextInt(100 - 10 + 1) + 10;
+		int [] vector = new int[n];
+		for (int i=0; i<vector.length;i++) {
+			vector[i] = r.nextInt(100 - (-100) + 1) -(-100); 
+		}
+	}
 }
